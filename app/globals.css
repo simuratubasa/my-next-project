@@ -1,11 +1,55 @@
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
+:root{
+  --font-mono: ui-monospace,Menlo, Monaco, "Cascadia Mono","Segoe UI Mono","Roboto Mono", "Oxygen Mono", "ubuntu Monospace", "Source Code Pro", "Fila Mono", "Droid Sans Mono", "Courier New", Monospace;
+  --color-text-marin: #333;
+  --coror-text-sub: #999;
+  --coror-text--unpainted: #fff;
+  --coror-text-error: #f33;
+  --coror-bg-main: #fff;
+  --coror-bg-sub: #f3f3f3;
+  --coror-bg-code: #fafafa;
+  --coror-bg-painted: #333;
+  --coror-border-back: #333;
+  --coror-border: #ddd;
+  --coror-border-light: #f3f3f3;
+  --coror-current: #eee;
+  --coror-button-primary: #333;
+  --border-radius: 4px;
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-.description {
-  text-align: center;
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    YuGothic,
+    "ヒラギノ角ゴ ProN W3",
+    Hiraginokaku Gothic ProN,
+    Arial,
+    "メイリオ",
+    Meiryo,
+    sans-serif;
+  color: var(--color-text-marin);
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
 }
