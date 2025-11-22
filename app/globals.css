@@ -1,18 +1,19 @@
 :root{
-  --font-mono: ui-monospace,Menlo, Monaco, "Cascadia Mono","Segoe UI Mono","Roboto Mono", "Oxygen Mono", "ubuntu Monospace", "Source Code Pro", "Fila Mono", "Droid Sans Mono", "Courier New", Monospace;
-  --color-text-marin: #333;
-  --coror-text-sub: #999;
-  --coror-text--unpainted: #fff;
-  --coror-text-error: #f33;
-  --coror-bg-main: #fff;
-  --coror-bg-sub: #f3f3f3;
-  --coror-bg-code: #fafafa;
-  --coror-bg-painted: #333;
-  --coror-border-back: #333;
-  --coror-border: #ddd;
-  --coror-border-light: #f3f3f3;
-  --coror-current: #eee;
-  --coror-button-primary: #333;
+  --font-mono: ui-monospace,Menlo, Monaco, "Cascadia Mono","Segoe UI Mono","Roboto Mono", "Oxygen Mono", "ubuntu Monospace", "Source Code Pro", "Fila Mono", "Droid Sans Mono", "Courier New", monospace;
+  --color-text-main: #333;
+  --color-text-sub: #999;
+  --color-text-unpainted: #fff;
+  --color-text-error: #f33;
+  --color-bg-main: #fff;
+  --color-bg-sub: #f3f3f3;
+  --color-bg-code: #fafafa;
+  --color-bg-painted: #333;
+  --color-border-back: #333;
+  --color-border: #ddd;
+  --color-border-light: #f3f3f3;
+  --color-current: #eee;
+  --color-button-primary: #333;
+  --color-tag-bg-sub: #f0f0f0;
   --border-radius: 4px;
 }
 
@@ -40,7 +41,7 @@ body {
     "メイリオ",
     Meiryo,
     sans-serif;
-  color: var(--color-text-marin);
+  color: var(--color-text-main);
   line-height: 1.8;
 }
 
