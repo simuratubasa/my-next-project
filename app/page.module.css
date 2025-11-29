@@ -69,6 +69,10 @@
   border-radius: var(--border-radius);
 }
 
+.content{
+  flex: 1;
+}
+
 .newsItemTitle{
   font-size: 1.1em;
   font-weight: bold;
