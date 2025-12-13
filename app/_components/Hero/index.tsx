@@ -3,18 +3,15 @@ import styles from "./index.module.css";
 
 type Props = {
     title: string;
-    sub: string;
+    sub?: string;
 };
 
 export default function Hero({ title, sub }: Props){
     return (
         <section className={styles.top}>
             <div>
-
-
-                
                 <h1 className={styles.title}>{title}</h1>
-                <p className={styles.descript}>{sub}</p>
+                {sub && <p className={styles.descript}>{sub}</p>}
             </div>
             <Image
                 className={styles.bgimg}
