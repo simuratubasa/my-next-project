@@ -13,24 +13,22 @@ export type Member ={
 
 export type Category = {
     name: string;
-};
+} &MicroCMSListContent
 
 export type News = {
-    id: string;
     title: string;
-    category: {
-        name: string;
-    };
-    publishedAt: string;
-    createdAt: string;
-};
+    description: string;
+    content: string;
+    thumbnail: MicroCMSImage;
+    category: Category;
+} &MicroCMSListContent
 
 if (!process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN) {
-    throw new Error("MICROCMS_SERVICE_DOMAIN is not required");
+    throw new Error("MICROCMS_SERVICE_DOMAIN is required");
 }
 
 if (!process.env.MICROCMS_API_KEY) {
-    throw new Error("MICROCMS_API_KEY is not required");
+    throw new Error("MICROCMS_API_KEY is required");
 }
 
 const client = createClient({
@@ -46,3 +44,14 @@ export const getMembers = async (queries?: MicroCMSQueries) => {
         });
     return listData;
 }
+
+export const getNews = async (queries?: MicroCMSQueries) => {
+    const listData = await client
+        .getList<News>({
+            endpoint: "news",
+            queries,
+        });
+    return listData;
+}
+// 既存コードで `getMemberList` を参照している箇所があるため互換のためのエイリアスを追加
+export const getMemberList = getMembers;
