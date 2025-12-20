@@ -1,8 +1,8 @@
-import Link from "next/link";
-import styles from "./index.module.css";
+import Link from 'next/link';
+import styles from './index.module.css';
 
-export default function Footer(): JSX.Element {
-  return (    
+export default function Footer() {
+  return (
     <footer className={styles.footer}>
       <nav className={styles.nav}>
         <ul className={styles.items}>
@@ -17,7 +17,7 @@ export default function Footer(): JSX.Element {
           </li>
         </ul>
       </nav>
-      <p className={styles.cr}>©️ SIMPLE. All Rights Reserved 2024 </p>
+      <p className={styles.cr}>© SIMPLE. All Rights Reserved 2024</p>
     </footer>
   );
-} 
+}

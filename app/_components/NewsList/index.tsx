@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from "./index.module.css";
-import Category from "../Category";
-import Date from "../Date";
-import { News } from "@/app/_libs/microcms";
+import styles from './index.module.css';
+import Category from '../Category';
+import Date from '../Date';
+import { News } from '@/app/_libs/microcms';
 
 type Props = {
   news: News[];
-}
+};
 
 export default function NewsList({ news }: Props) {
   if (news.length === 0) {
@@ -21,9 +21,9 @@ export default function NewsList({ news }: Props) {
           <Link href={`/news/${article.id}`} className={styles.link}>
             {article.thumbnail ? (
               <Image
-                className={styles.image}
                 src={article.thumbnail.url}
                 alt=""
+                className={styles.image}
                 width={article.thumbnail.width}
                 height={article.thumbnail.height}
               />
@@ -36,11 +36,11 @@ export default function NewsList({ news }: Props) {
                 height={630}
               />
             )}
-             <dl className={styles.content}>
+            <dl className={styles.content}>
               <dt className={styles.title}>{article.title}</dt>
               <dd className={styles.meta}>
                 <Category category={article.category} />
-                <Date deta={article.publishedAt ?? article.createdAt} />
+                <Date date={article.publishedAt ?? article.createdAt} />
               </dd>
             </dl>
           </Link>
